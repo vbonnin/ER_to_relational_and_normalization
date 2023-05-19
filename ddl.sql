@@ -9,7 +9,8 @@ CREATE TABLE Person (
 CREATE TABLE Doctor (
   doctor_id INT PRIMARY KEY,
   person_id INT,
-  FOREIGN KEY (person_id) REFERENCES Person(person_id)
+  FOREIGN KEY (person_id) REFERENCES Person(person_id),
+  FOREIGN KEY (speciality_id) REFERENCES Speciality(speciality_id)
 );
 
 CREATE TABLE Patient (
