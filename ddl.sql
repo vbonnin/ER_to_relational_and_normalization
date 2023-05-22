@@ -6,9 +6,15 @@ CREATE TABLE Person (
   gender CHAR(1)
 );
 
+CREATE TABLE Speciality (
+  speciality_id INT PRIMARY KEY,
+  name VARCHAR(255)
+);
+
 CREATE TABLE Doctor (
   doctor_id INT PRIMARY KEY,
   person_id INT,
+  speciality_id INT,
   FOREIGN KEY (person_id) REFERENCES Person(person_id),
   FOREIGN KEY (speciality_id) REFERENCES Speciality(speciality_id)
 );
@@ -21,11 +27,6 @@ CREATE TABLE Patient (
   mail VARCHAR(255),
   insurance VARCHAR(255),
   FOREIGN KEY (person_id) REFERENCES Person(person_id)
-);
-
-CREATE TABLE Speciality (
-  speciality_id INT PRIMARY KEY,
-  name VARCHAR(255)
 );
 
 CREATE TABLE Medical_Consultation (
