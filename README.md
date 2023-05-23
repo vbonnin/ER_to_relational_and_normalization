@@ -28,3 +28,7 @@ This is our relational model from our E-R model.
 We have created our foreign keys to relate the tables as well, as we have created a new table to do the many-to-many relationship between medication and prescription.
 
 ![](img/relational_model.png)
+
+## DDL and DML
+
+Finally, we create a DDL and DML, you can find in our repo.
